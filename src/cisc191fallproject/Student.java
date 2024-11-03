@@ -13,7 +13,6 @@ public class Student
 		this.id = id;
 	}
 	
-	
 	public int getGrade()
 	{
 		return grade;
