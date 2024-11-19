@@ -18,6 +18,9 @@ class StudentTest
 	{
 		Student student1 = new Student("John", 1234);
 		assertEquals("John", student1.getName());	
+		String studentName = "Josh";
+		int studentID = 4321;
+		Student student2 = new Student(studentName, studentID);
 	}
 
 	@Test 
@@ -26,6 +29,8 @@ class StudentTest
 		Student student1 = new Student("James", 5678);
 		assertEquals(5678, student1.getID());	
 	}
+	
+	
 	
 	
 }
