@@ -22,6 +22,9 @@ public class GradingSystemView extends JFrame
 	private JTextField addIDTextField;
 	private JTextField courseTextField;
 	private JButton addCourseButton;
+	private JTextField addGradeTextField;
+	private JButton addGradeButton;
+	private JButton removeStudentButton;
 	
 	public GradingSystemView(Teacher teacher)
 	{
@@ -40,19 +43,32 @@ public class GradingSystemView extends JFrame
         JLabel studentCourse = new JLabel("Course:");
         courseTextField = new JTextField(10);
         addCourseButton = new JButton("Add");
+        JLabel studentGrade = new JLabel("Grade:");
+        addGradeTextField = new JTextField(10);
+        addGradeButton = new JButton("Add");
+        removeStudentButton = new JButton("Remove");
+        
+        
         
         addStudentButton.addActionListener(new GradingSystemListener(student, teacher, this));
         addIDButton.addActionListener(new GradingSystemListener(student, teacher, this));
+        addCourseButton.addActionListener(new GradingSystemListener(student, teacher, this));
+        addGradeButton.addActionListener(new GradingSystemListener(student, teacher, this));
+        removeStudentButton.addActionListener(new GradingSystemListener(student, teacher, this));
         
         editPanel.add(addStudentName, BorderLayout.WEST);
         editPanel.add(addStudentTextField);
         editPanel.add(addStudentButton);
+        editPanel.add(removeStudentButton);
         editPanel.add(addID, BorderLayout.WEST);
         editPanel.add(addIDTextField);
         editPanel.add(addIDButton);
         editPanel.add(studentCourse);
         editPanel.add(courseTextField);
         editPanel.add(addCourseButton);
+        editPanel.add(studentGrade);
+        editPanel.add(addGradeTextField);
+        editPanel.add(addGradeButton);
         
 		add(editPanel, BorderLayout.WEST);
 		//add(gridPanel);
@@ -74,14 +90,38 @@ public class GradingSystemView extends JFrame
 		return addStudentTextField.getText();
 	}
 	
+	public JButton getRemoveStudentButton()
+	{
+		return removeStudentButton;
+	}
+	public JButton getIDButton() // returns the id button object
+	{
+		return addIDButton;
+	}
+	
 	public String getStudentIDTextField() // returns the student id textfield
 	{
 		return addIDTextField.getText();
 	}
 	
-	public JButton getIDButton() // returns the id button object
+	public JButton getCourseButton()
 	{
-		return addIDButton;
+		return addCourseButton;
+	}
+	
+	public String getCourseTextField()
+	{
+		return courseTextField.getText();
+	}
+	
+	public JButton getGradeButton()
+	{
+		return addGradeButton;
+	}
+	
+	public String getGradeTextField()
+	{
+		return addGradeTextField.getText();
 	}
 	
 	public static void main(String[] args)

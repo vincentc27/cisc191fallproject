@@ -15,11 +15,16 @@ public class Student
 		
 	}
 	
+	public Student(String name)
+	{
+		this.name = name;
+	}
+	
 	public Student(String name, int id)
 	{
 		this.name = name;
 		this.id = id;
-		this.grades = new Hashtable<>();// a student has their own grades for each course
+		//this.grades = new Hashtable<>();// a student has their own grades for each course
 	}
 	
 	public Integer getGrade(String subject)  // returns the grade
@@ -45,6 +50,11 @@ public class Student
 	public void setID(int id) // set student id
 	{
 		this.id = id;
+	}
+	
+	public String toString()
+	{
+		return name;
 	}
 	
 }

@@ -25,15 +25,36 @@ public class GradingSystemListener implements ActionListener
 		{
 			String studentName = gradingSystemView.getStudentTextField();
 			System.out.println(studentName);
-            student.setName(studentName);
-			teacher.addStudent(new Student());
+            Student student = new Student(studentName);
+            teacher.addStudent(student);
+            System.out.println(teacher.getStudentName(studentName));
 		}
 		
+		else if(e.getSource() == gradingSystemView.getRemoveStudentButton())
+		{
+			String removeStudentName = gradingSystemView.getStudentTextField();
+			System.out.println(removeStudentName);	
+		}
+				
 		else if(e.getSource() == gradingSystemView.getIDButton())
 		{
 			int studentID = Integer.parseInt(gradingSystemView.getStudentIDTextField());
 			System.out.println(studentID);
 		}
+		
+		else if(e.getSource() == gradingSystemView.getCourseButton())
+		{
+			String courseName = gradingSystemView.getCourseTextField();
+			System.out.println(courseName);
+		}
+		
+		else if(e.getSource() == gradingSystemView.getGradeButton())
+		{
+			String grade = gradingSystemView.getGradeTextField();
+			System.out.println(grade);
+		}
 	}
 
 }
+
+
