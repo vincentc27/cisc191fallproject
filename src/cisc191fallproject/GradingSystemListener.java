@@ -28,6 +28,7 @@ public class GradingSystemListener implements ActionListener
             Student student = new Student(studentName);
             teacher.addStudent(student);
             System.out.println(teacher.getStudentName(studentName));
+           
 		}
 		
 		else if(e.getSource() == gradingSystemView.getRemoveStudentButton())

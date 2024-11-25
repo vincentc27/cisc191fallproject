@@ -23,7 +23,6 @@ public class Teacher
 	public void removeStudent(Student student) // method to remove a student
 	{
 		students.remove(student);
-		
 	}
 	
 	public Student getStudentName(String name) // get name of the student

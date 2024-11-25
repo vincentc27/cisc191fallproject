@@ -47,6 +47,7 @@ public class GradingSystemView extends JFrame
         addGradeTextField = new JTextField(10);
         addGradeButton = new JButton("Add");
         removeStudentButton = new JButton("Remove");
+       
         
         
         
